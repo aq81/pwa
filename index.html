@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA بسيط</title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker مسجل بنجاح!'))
+                .catch(error => console.log('فشل تسجيل Service Worker', error));
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1>مرحبًا بك في PWA!</h1>
+    <p>يمكنك الآن تثبيت هذا التطبيق على هاتفك.</p>
+</body>
+</html>
